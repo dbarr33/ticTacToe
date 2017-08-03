@@ -1,5 +1,5 @@
 <resources>
-    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">yg_dh_kLPrjRvr3UuGqqPvRdCsge98b95895-4708-4d87-aaed-6b845f6b7bea</string>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">UzAwcOUQdKjzXDJHnjirFTHWVId798b95895-4708-4d87-aaed-6b845f6b7bea</string>
     <string moduleConfig="true" name="mobileCenterCrashes_whenToSendCrashes">ALWAYS_SEND</string>
     <string moduleConfig="true" name="mobileCenterAnalytics_whenToEnableAnalytics">ALWAYS_SEND</string>
     <string name="app_name">ticTacToe</string>
