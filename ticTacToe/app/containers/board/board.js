@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 // Components
-import Selection from '../../components/selections/selection';
+import Space from '../../components/space/space';
 import NewGame from '../../components/buttons/newGame';
 
 class Board extends Component {
@@ -27,10 +27,14 @@ class Board extends Component {
     for (let i = 0; i < 3; i++) {
       if (selectedValues[`0,${i}`] && selectedValues[`0,${i}`] === selectedValues[`1,${i}`] && selectedValues[`1,${i}`] === selectedValues[`2,${i}`]) {
         this.setState({ winner: selectedValues[`0,${i}`] });
-      }
-      if (selectedValues[`${i},0`] && selectedValues[`${i},0`] === selectedValues[`${i},1`] && selectedValues[`${i},1`] === selectedValues[`${i},2`]) {
+      } else if (selectedValues[`${i},0`] && selectedValues[`${i},0`] === selectedValues[`${i},1`] && selectedValues[`${i},1`] === selectedValues[`${i},2`]) {
         this.setState({ winner: selectedValues[`${i},0`] });
       }
+    }
+    if (selectedValues['1,1'] && selectedValues['0,0'] === selectedValues['1,1'] && selectedValues['1,1'] === selectedValues['2,2']) {
+      this.setState({ winner: selectedValues['1,1'] });
+    } else if (selectedValues['1,1'] && selectedValues['2,0'] === selectedValues['1,1'] && selectedValues['1,1'] === selectedValues['0,2']) {
+      this.setState({ winner: selectedValues['1,1'] });
     }
   }
 
@@ -44,7 +48,7 @@ class Board extends Component {
 
   renderSelection(position) {
     return (
-      <Selection
+      <Space
         disabled={this.state.winner !== ''}
         selection={this.state.selectedValues[position]}
         position={position}

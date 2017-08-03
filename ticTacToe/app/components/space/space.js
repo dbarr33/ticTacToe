@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 
-class Selection extends Component {
+class Space extends Component {
   static propTypes = {
     selection: PropTypes.string,
     position: PropTypes.string.isRequired,
@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
   }
 });
 
-Selection.defaultProps = {
+Space.defaultProps = {
   selection: ''
 };
 
-export default Selection;
+export default Space;
