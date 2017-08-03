@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import codePush, { InstallMode } from 'react-native-code-push';
 
 import App from './containers/app/app';
+
 class Root extends Component {
   componentDidMount() {
-    codePush.sync({installMode: InstallMode.IMMEDIATE});
+    codePush.sync({ installMode: InstallMode.IMMEDIATE });
   }
 
   render() {
     return (
-      <App/>
+      <App />
     );
   }
 }
 
-export default Root
+export default Root;
